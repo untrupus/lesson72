@@ -1,0 +1,59 @@
+.singleDish {
+    display: flex;
+    margin-top: 25px;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.dishImg {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.dishInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+.dishInfo h3 {
+    flex-grow: 1;
+    color: white;
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.dishInfo p {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.dishInfo span {
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    background: red;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background: #913c3c;
+}
