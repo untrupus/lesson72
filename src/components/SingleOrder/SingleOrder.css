@@ -1,0 +1,37 @@
+.singleOrder {
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.orderPrice p {
+    font-size: 25px;
+    color: white;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.orderPrice span {
+    color: red;
+}
+
+.orderTotal p {
+    font-size: 25px;
+    color: white;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+.price p {
+    font-size: 25px;
+    color: red;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.price span {
+    color: white;
+}

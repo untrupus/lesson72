@@ -41,6 +41,11 @@
     color: white;
 }
 
+.edit {
+    text-decoration: none;
+    color: white;
+}
+
 .btn {
     display: inline-block;
     margin-right: 20px;

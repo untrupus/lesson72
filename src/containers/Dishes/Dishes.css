@@ -1,6 +1,7 @@
 .dishList {
     width: 1000px;
     margin: 10px auto;
+    min-height: 650px;
 }
 
 .dishHeader {
@@ -8,6 +9,11 @@
     justify-content: space-around;
     color: white;
     align-items: center;
+}
+
+.dishHeader h4 {
+    font-size: 25px;
+    text-transform: uppercase;
 }
 
 .addBtn {

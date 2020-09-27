@@ -2,10 +2,12 @@
     width: 1000px;
     margin: 20px auto;
     color: white;
+    height: 650px;
 }
 
 .addForm h2 {
     color: red;
+    text-transform: capitalize;
 }
 
 .inputDescription {

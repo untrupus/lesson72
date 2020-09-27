@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import './SingleDish.css';
 
 const SingleDish = props => {
@@ -12,9 +13,10 @@ const SingleDish = props => {
                 <p>{props.price} <span>KGS</span></p>
                 <button type="button"
                         className="btn"
-                >Edit</button>
+                ><Link className="edit" to={'/' + props.id + '/edit'}>Edit</Link></button>
                 <button type="button"
                         className="btn"
+                        onClick={props.del}
                 >Delete</button>
             </div>
         </div>

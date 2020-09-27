@@ -1,9 +1,44 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {fetchMenu} from "../../store/actions";
+import {NavLink} from "react-router-dom";
+import axiosOrder from "../../axiosOrder";
 import SingleDish from "../../components/SingleDish/SingleDish";
 import './Dishes.css';
-import {NavLink} from "react-router-dom";
 
 const Dishes = () => {
+    const menu = useSelector(state => state.menu);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchMenu());
+    }, [dispatch]);
+
+    const deleteItem = async (id) => {
+        await axiosOrder.delete('pizza/' + id + '.json');
+        dispatch(fetchMenu());
+    };
+
+    let menuList;
+    if (menu === null) {
+        menuList = (
+            <h3>Add new pizza...</h3>
+        );
+    } else {
+        menuList = Object.entries(menu).map(pizza => {
+            return (
+                <SingleDish
+                    key={pizza[0]}
+                    name={pizza[1].name}
+                    price={pizza[1].price}
+                    src={pizza[1].link}
+                    del={() => deleteItem(pizza[0])}
+                    id={pizza[0]}
+                />
+            )
+        });
+    }
+
     return (
         <div className="dishList">
             <div className="dishHeader">
@@ -14,13 +49,7 @@ const Dishes = () => {
                                   className="addBtn"
                 >Add new pizza</NavLink></button>
             </div>
-            <SingleDish
-            src="http://mobile.mypizza.kg:8081/jpg/%D0%9F%D0%B8%D1%86%D1%86%D0%B0-%D0%98%D1%82%D0%B0%D0%BB%D1%8C%D1%8F%D0%BD%D0%BA%D0%B0.jpg"
-            name="italian"
-            price="450"
-
-
-            />
+            {menuList}
         </div>
     );
 };
