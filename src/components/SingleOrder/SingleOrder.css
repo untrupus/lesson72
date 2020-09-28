@@ -10,10 +10,12 @@
 .orderTotal {
     flex-grow: 1;
 }
+
 .singlePrice {
     display: flex;
     justify-content: space-between;
 }
+
 .orderPrice {
     margin-left: 60px;
 }
@@ -34,6 +36,12 @@
     color: white;
     margin-top: 0;
     text-transform: capitalize;
+}
+
+.orderTotal span {
+    color: red;
+    text-transform: lowercase;
+    font-weight: bold;
 }
 
 .price p {

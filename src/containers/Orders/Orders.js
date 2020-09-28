@@ -27,7 +27,7 @@ const Orders = () => {
          ordersList = Object.entries(orders).map(order => {
             const orderItem = Object.entries(order[1]).map(item => {
                 return (
-                    <p key={menu[item[0]].name}>{menu[item[0]].name} x {item[1]}</p>
+                    <p key={menu[item[0]].name}>{item[1]} <span>x</span> {menu[item[0]].name}</p>
                 )
             });
             const itemPrice = Object.entries(order[1]).map(item => {
