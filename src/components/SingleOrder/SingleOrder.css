@@ -7,6 +7,17 @@
     margin-bottom: 10px;
 }
 
+.orderTotal {
+    flex-grow: 1;
+}
+.singlePrice {
+    display: flex;
+    justify-content: space-between;
+}
+.orderPrice {
+    margin-left: 60px;
+}
+
 .orderPrice p {
     font-size: 25px;
     color: white;
@@ -30,6 +41,7 @@
     color: red;
     margin-top: 0;
     font-weight: bold;
+    width: 200px;
 }
 
 .price span {

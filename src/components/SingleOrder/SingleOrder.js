@@ -10,7 +10,7 @@ const SingleOrder = props => {
             </div>
             <div className="price">
                 {props.price}
-                <p>150 <span>KGS</span></p>
+                <p className="singlePrice">150 <span>KGS</span></p>
             </div>
             <div className="orderPrice">
                 <p>Total price</p>

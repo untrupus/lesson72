@@ -32,7 +32,9 @@ const Orders = () => {
             });
             const itemPrice = Object.entries(order[1]).map(item => {
                 return (
-                    <p key={menu[item[0]].name}>{menu[item[0]].price * item[1]} <span>KGS</span></p>
+                    <p key={menu[item[0]].name}
+                       className="singlePrice"
+                    >{menu[item[0]].price * item[1]} <span>KGS</span></p>
                 )
             });
             let total = [];
